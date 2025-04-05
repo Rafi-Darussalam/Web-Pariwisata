@@ -403,7 +403,7 @@ html {
     backdrop-filter: blur(10px);
 }
 
-.wrappe {
+.wrapper {
     margin: 60px auto;
     overflow: hidden;
     width: 70%;
