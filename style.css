@@ -38,7 +38,6 @@ html {
     border-bottom: 1px solid white;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
-    z-index: 100;
 }
 
 .header::before {
@@ -69,12 +68,6 @@ html {
     text-decoration: none;
     margin-left: 2.5rem;
     display: inline-block;
-}
-
-.tombool {
-    background: rgba(221, 221, 221, 0.479);
-    padding: 5px;
-    border: 1px solid white
 }
 
 .navbar a:hover {
@@ -193,7 +186,6 @@ html {
     overflow: hidden;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
     margin: 20px;
-    z-index: 0;
 }
 
 .card img {
@@ -269,7 +261,6 @@ html {
     margin-top: 70px;
     padding: 20px 0;
     background-color: #eeeeee;
-    z-index: 1;
 }
 
 .footer .social {
@@ -420,21 +411,22 @@ html {
     align-items: center;
     background: rgb(235, 235, 235);
     padding: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     transition: .3s ease-in-out;
 }
 
 .wrapper img {
     max-width: 320px;
+    border: 2px solid white;
     float: left;
     margin-right: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .wrapper:hover {
     transform: translate(0, 7px);
-    background: rgb(247, 247, 247);
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
 
 .text-box p {
