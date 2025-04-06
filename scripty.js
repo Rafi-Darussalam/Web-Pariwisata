@@ -16,32 +16,32 @@ window.addEventListener('load', function () {
   }, 500);
 });
 
-const scrollBox = document.querySelector('.card-group');
+const cardGroup = document.querySelector('.card-group');
 let isDown = false;
 let startX;
 let scrollLeft;
 
-scrollBox.addEventListener('mousedown', (e) => {
+cardGroup.addEventListener('mousedown', (e) => {
   isDown = true;
-  startX = e.pageX - scrollBox.offsetLeft;
-  scrollLeft = scrollBox.scrollLeft;
-  scrollBox.style.cursor = 'grabbing';
+  cardGroup.classList.add('active');
+  startX = e.pageX - cardGroup.offsetLeft;
+  scrollLeft = cardGroup.scrollLeft;
 });
 
-scrollBox.addEventListener('mouseleave', () => {
+cardGroup.addEventListener('mouseleave', () => {
   isDown = false;
-  scrollBox.style.cursor = 'grab';
+  cardGroup.classList.remove('active');
 });
 
-scrollBox.addEventListener('mouseup', () => {
+cardGroup.addEventListener('mouseup', () => {
   isDown = false;
-  scrollBox.style.cursor = 'grab';
+  cardGroup.classList.remove('active');
 });
 
-scrollBox.addEventListener('mousemove', (e) => {
+cardGroup.addEventListener('mousemove', (e) => {
   if (!isDown) return;
   e.preventDefault();
-  const x = e.pageX - scrollBox.offsetLeft;
-  const walk = (x - startX) * 2;
-  scrollBox.scrollLeft = scrollLeft - walk;
+  const x = e.pageX - cardGroup.offsetLeft;
+  const walk = (x - startX) * 1;
+  cardGroup.scrollLeft = scrollLeft - walk;
 });
