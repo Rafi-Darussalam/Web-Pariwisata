@@ -5,3 +5,11 @@ window.addEventListener('scroll', function() {
       checkbox.checked = false;
     }
   });
+
+window.addEventListener('load', function () {
+  loading.classList.add('fade-out');
+  
+  setTimeout(() => {
+    loading.style.display = 'none';
+  }, 500);
+});

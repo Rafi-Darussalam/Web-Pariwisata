@@ -41,3 +41,11 @@ function moveSlider(direction) {
         }
     }, {once: true})
 }
+
+window.addEventListener('load', function () {
+    loading.classList.add('fade-out');
+    
+    setTimeout(() => {
+      loading.style.display = 'none';
+    }, 500);
+});
