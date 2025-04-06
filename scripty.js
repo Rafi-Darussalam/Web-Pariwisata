@@ -7,9 +7,11 @@ window.addEventListener('scroll', function() {
   });
 
 window.addEventListener('load', function () {
+  const loading = document.getElementById('loading');
   loading.classList.add('fade-out');
   
   setTimeout(() => {
     loading.style.display = 'none';
+
   }, 500);
 });
