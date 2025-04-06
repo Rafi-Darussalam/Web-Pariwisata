@@ -469,6 +469,7 @@ html {
     grid-auto-flow: column;
     gap: 25px;
     margin: 25px;
+    margin-bottom: 100px;
     overflow-x: auto;
     overflow-y: auto;
 }
@@ -491,7 +492,7 @@ html {
     object-fit: cover;
     pointer-events: none;
     transition: 0.5s;
-    transform: scale(1.3)
+    transform: scale(1.1)
 }
 
 .kartu .layer {
@@ -540,6 +541,6 @@ html {
     opacity: 100;
 }
 
-.card-group:hover > .kartu:not(:hover) {
-    filter: blur(2px);
+.kartu:hover .kartu img:not(:hover) {
+    opacity: 0;
 }
