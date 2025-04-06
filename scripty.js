@@ -15,3 +15,33 @@ window.addEventListener('load', function () {
 
   }, 500);
 });
+
+const scrollBox = document.querySelector('.card-group');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+scrollBox.addEventListener('mousedown', (e) => {
+  isDown = true;
+  startX = e.pageX - scrollBox.offsetLeft;
+  scrollLeft = scrollBox.scrollLeft;
+  scrollBox.style.cursor = 'grabbing';
+});
+
+scrollBox.addEventListener('mouseleave', () => {
+  isDown = false;
+  scrollBox.style.cursor = 'grab';
+});
+
+scrollBox.addEventListener('mouseup', () => {
+  isDown = false;
+  scrollBox.style.cursor = 'grab';
+});
+
+scrollBox.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - scrollBox.offsetLeft;
+  const walk = (x - startX) * 2;
+  scrollBox.scrollLeft = scrollLeft - walk;
+});
