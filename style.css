@@ -448,7 +448,8 @@ html {
 }
 
 .whatsapp:hover {
-    color: rgb(0, 226, 0);
+    color: rgb(0, 255, 0);
+    text-shadow: 0 0 4px white;
 }
 
 .fa-instagram:hover {
