@@ -16,7 +16,7 @@ window.addEventListener('load', function () {
   }, 500);
 });
 
-const cardGroup = document.querySelector('.card-group');
+const cardGroup = document.querySelector('.card-group, .card-container');
 let isDown = false;
 let startX;
 let scrollLeft;
@@ -44,4 +44,35 @@ cardGroup.addEventListener('mousemove', (e) => {
   const x = e.pageX - cardGroup.offsetLeft;
   const walk = (x - startX) * 1;
   cardGroup.scrollLeft = scrollLeft - walk;
+})
+
+const container = document.querySelector('.card-container');
+const cards = Array.from(container.children);
+
+for (let i = 0; i < 2; i++) {
+  cards.forEach(card => {
+    container.appendChild(card.cloneNode(true));
+  });
+}
+
+
+window.addEventListener('load', () => {
+  const middle = container.scrollWidth / 2 - container.clientWidth / 2;
+  container.scrollLeft = middle;
+});
+
+container.addEventListener('scroll', () => {
+  const maxScroll = container.scrollWidth;
+  const current = container.scrollLeft;
+
+  if (current < 100) {
+    container.scrollLeft = current + (maxScroll / 3);
+  }
+  if (current > maxScroll - container.clientWidth - 100) {
+    container.scrollLeft = current - (maxScroll / 3);
+  }
+});
+
+document.querySelectorAll('img, a').forEach(img => {
+  img.setAttribute('draggable', 'false');
 });
