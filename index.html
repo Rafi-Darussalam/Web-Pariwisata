@@ -69,39 +69,9 @@ data-aos-duration="1200">
                     <img src="img/Tempat wisata.jpg">
                 </div>
                 <div class="card-content">
-                <h3>Tempat Wisata</h3>
-                <p>Tempat Wisata Rekomendasi di Aceh</p>
+                <h3>Area Wisata</h3>
+                <p>Area Wisata Rekomendasi di Aceh</p>
                 <a href="wisata.html"class="btn">Selengkapnya</a>
-            </div>
-        </div>
-        <div class="card">
-                <div class="fuoto">
-                    <img src="img/Kuliner.jpg">
-                </div>
-                <div class="card-content">
-                <h3>Kuliner</h3>
-                <p>Kuliner di Aceh</p>
-                <a href="kuliner.html"class="btn">Selengkapnya</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="fuoto">
-                <img src="img/Budaya.jpg">
-            </div>
-                <div class="card-content">
-                <h3>Budaya</h3>
-                <p>Budaya Yang Ada di Aceh</p>
-                <a href="budaya.html"class="btn">Selengkapnya</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="fuoto">
-                <img src="img/Kota.jpg">
-            </div>
-                <div class="card-content">
-                <h3>Kota & Kabupaten</h3>
-                <p>Kota dan Kabupaten di Aceh</p>
-                <a href="kobu.html"class="btn">Selengkapnya</a>
             </div>
         </div>
         <div class="card">
@@ -146,6 +116,38 @@ data-aos-duration="1200">
         </div>
     </div>
 
+    <div class="card-grup" data-aos="fade-up"
+    data-aos-duration="1500">
+        <div class="crd">
+            <img src="img/Kota.jpg" alt="">
+            <div class="lyr"></div>
+            <div class="inf">
+                <h1>Kota & Kabupaten</h1>
+                <p>Cari Tahu Tentang Kota dan Kabupaten</p>
+                <a href="kobu.html">Lihat</a>
+            </div>
+        </div>
+        <div class="crd">
+            <img src="img/kambing.jpg" alt="">
+            <div class="lyr"></div>
+            <div class="inf">
+                <h1>Kuliner</h1>
+                <p>Cari Tahu Tentang Kuliner</p>
+                <a href="kuliner.html">Lihat</a>
+            </div>
+        </div>
+        <div class="crd">
+            <img src="img/saman.jpg" alt="">
+            <div class="lyr"></div>
+            <div class="inf">
+                <h1>Budaya</h1>
+                <p>Cari Tahu Tentang Budaya di Aceh</p>
+                <a href="budaya.html">Lihat</a>
+            </div>
+        </div>
+    </div>
+    
+
     <div class="loading-screen" id="loading">
         <img src="img/load.gif" alt="Loading...">
     </div>
@@ -173,6 +175,37 @@ data-aos-duration="1200">
         &copy2025 Rafi Darusalam - All Rights Reserved
     </p>
 
+    <script>
+        let grupKartu = document.querySelector('.card-grup');
+        let sedangDrag = false;
+        let posisiAwalX;
+        let scrollAwal;
+
+        grupKartu.addEventListener('mousedown', function(e) {
+        sedangDrag = true;
+        grupKartu.classList.add('active');
+        posisiAwalX = e.pageX - grupKartu.offsetLeft;
+        scrollAwal = grupKartu.scrollLeft;
+        });
+
+        grupKartu.addEventListener('mouseleave', function() {
+        sedangDrag = false;
+        grupKartu.classList.remove('active');
+        });
+
+        grupKartu.addEventListener('mouseup', function() {
+        sedangDrag = false;
+        grupKartu.classList.remove('active');
+        });
+
+        grupKartu.addEventListener('mousemove', function(e) {
+        if (!sedangDrag) return;
+        e.preventDefault();
+        let posisiX = e.pageX - grupKartu.offsetLeft;
+        let jarakGeser = (posisiX - posisiAwalX) * 2;
+        grupKartu.scrollLeft = scrollAwal - jarakGeser;
+        });
+    </script>
     <script src="scripty.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

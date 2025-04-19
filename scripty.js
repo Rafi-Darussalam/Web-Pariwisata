@@ -49,30 +49,21 @@ cardGroup.addEventListener('mousemove', (e) => {
 const container = document.querySelector('.card-container');
 const cards = Array.from(container.children);
 
-for (let i = 0; i < 2; i++) {
-  cards.forEach(card => {
-    container.appendChild(card.cloneNode(true));
-  });
-}
-
-
 window.addEventListener('load', () => {
   const middle = container.scrollWidth / 2 - container.clientWidth / 2;
   container.scrollLeft = middle;
 });
 
-container.addEventListener('scroll', () => {
-  const maxScroll = container.scrollWidth;
-  const current = container.scrollLeft;
-
-  if (current < 100) {
-    container.scrollLeft = current + (maxScroll / 3);
-  }
-  if (current > maxScroll - container.clientWidth - 100) {
-    container.scrollLeft = current - (maxScroll / 3);
-  }
-});
-
 document.querySelectorAll('img, a').forEach(img => {
   img.setAttribute('draggable', 'false');
 });
+
+window.addEventListener('load', () => {
+  const cardWrapper = document.querySelector('.card-grup');
+  const cardItems = Array.from(cardWrapper.children);
+
+  const middle = cardWrapper.scrollWidth / 2 - cardWrapper.clientWidth / 2;
+  cardWrapper.scrollLeft = middle;
+});
+
+
