@@ -266,6 +266,17 @@ html {
     text-wrap: nowrap;
 }
 
+.skrol {
+    margin-left: 10px;
+    margin-top: 35px;
+}
+
+.skrol h1 {
+    font-weight: bold;
+    font-size: 25px;
+    text-wrap: nowrap;
+}
+
 .footer {
     margin-top: 70px;
     padding: 20px 0;
@@ -591,7 +602,6 @@ html {
     display: grid;
     grid-auto-flow: column;
     gap: 15px;
-    margin-bottom: 100px;
     overflow-x: auto;
     overflow-y: auto;
 }
@@ -600,7 +610,7 @@ html {
     scroll-snap-align: center;
     justify-content: center;
     width: 70vw;
-    height: 400px;
+    height: 450px;
 
     padding-top: 2px;
     padding-bottom: 2px;
@@ -671,4 +681,108 @@ html {
 .crd:hover > .inf {
     bottom: 0;
     opacity: 100;
+}
+
+.card-grp {
+    margin: 10px;
+    -webkit-scrollbar: none;
+    -ms-overflow-style: none;
+    margin-top: 20px;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.crdd {
+    scroll-snap-align: center;
+    justify-content: center;
+    width: 85vw;
+    height: 450px;
+
+    padding-top: 2px;
+    padding-bottom: 2px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+}
+
+.crdd img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    transition: 0.5s;
+    transform: scale(1.1)
+}
+
+.crdd .lyrr {
+    background: linear-gradient(to top,rgb(0, 0, 0), rgba(0, 0, 0, 0) );
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75%;
+    opacity: 100;
+    transition: 0.3s;
+}
+
+.crdd .inff {
+    position: absolute;
+    padding: 15px;
+    color: white;
+    transition: 0.5s;
+    bottom: 0;
+    opacity: 100;
+}
+
+.inff p {
+    font-size: 14px;
+    margin-top: 13px;
+    margin-bottom: 19px;
+}
+
+.inff a {
+    padding: 7px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.infff a {
+    padding: 7px;
+    color: rgb(90, 90, 90);
+    text-decoration: none;
+    background: rgb(185, 185, 185);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.crdd .infff {
+    position: absolute;
+    padding: 15px;
+    color: white;
+    transition: 0.5s;
+    bottom: 0;
+    opacity: 100;
+}
+
+.infff p {
+    font-size: 14px;
+    margin-top: 13px;
+    margin-bottom: 19px;
+}
+
+.inff a:hover {
+    background: rgb(187, 187, 187);
+}
+
+.inff h1 {
+    font-size: 20px;
 }

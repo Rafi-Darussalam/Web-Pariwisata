@@ -66,4 +66,40 @@ window.addEventListener('load', () => {
   cardWrapper.scrollLeft = middle;
 });
 
+const scrollContainer = document.querySelector('.card-grp');
+let isDragging = false;
+let startPositionX;
+let initialScroll;
 
+scrollContainer.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  scrollContainer.classList.add('active');
+  startPositionX = e.pageX - scrollContainer.offsetLeft;
+  initialScroll = scrollContainer.scrollLeft;
+});
+
+scrollContainer.addEventListener('mouseleave', () => {
+  isDragging = false;
+  scrollContainer.classList.remove('active');
+});
+
+scrollContainer.addEventListener('mouseup', () => {
+  isDragging = false;
+  scrollContainer.classList.remove('active');
+});
+
+scrollContainer.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  e.preventDefault();
+  const x = e.pageX - scrollContainer.offsetLeft;
+  const distanceMoved = (x - startPositionX) * 1;
+  scrollContainer.scrollLeft = initialScroll - distanceMoved;
+});
+
+const wadahKartu = document.querySelector('.card-grp');
+const daftarKartu = Array.from(wadahKartu.children);
+
+window.addEventListener('load', () => {
+  const tengahWadah = wadahKartu.scrollWidth / 2 - wadahKartu.clientWidth / 2;
+  wadahKartu.scrollLeft = tengahWadah;
+});
