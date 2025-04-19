@@ -31,15 +31,16 @@ header{
 }
 
 header a{
-    color: #eee;
+    color: #ffffff;
     margin-right: 5px;
     padding: 5px 10px;
     transition: 0.2s;
-    background: #14ff72cb;
+    background: #9e9e9ecb;
+    border-radius: 3px;
 }
 
 header a:hover{
-    background: #a8ffcbcb;
+    background: #7a7a7acb;
     border-radius: 2px;
 }
 
@@ -153,7 +154,7 @@ header a:hover{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #14ff72cb;
+    background-color: #9b9b9bcb;
     border: none;
     color: #fff;
     font-family: monospace;

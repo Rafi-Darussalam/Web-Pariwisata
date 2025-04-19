@@ -609,7 +609,7 @@ html {
 .crd {
     scroll-snap-align: center;
     justify-content: center;
-    width: 70vw;
+    width: 85vw;
     height: 450px;
 
     padding-top: 2px;
