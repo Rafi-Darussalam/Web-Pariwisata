@@ -27,7 +27,7 @@ data-aos-duration="1200">
     <h1 id="eksplor">Apa Yang ingin Anda Ketahui?</h1>
 </div>
     <header class="header">
-        <div class="logo"><i class='bx bxs-plane-take-off'></i></div>
+        <div class="logo" style="font-weight: bold;"><Span style="color: white;">To </Span><span style="color: orange;">Aceh</span></div>
 
         <input type="checkbox" id="check">
         <label for="check" class="icons">
@@ -55,6 +55,26 @@ data-aos-duration="1200">
 
         <div class="card">
             <div class="fuoto">
+                <img src="img/Ekonomi.jpg">
+            </div>
+                <div class="card-content">
+                <h3>Ekonomi</h3>
+                <p>Ekonomi di Aceh</p>
+                <a href="ekon.html"class="btn">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="fuoto">
+                <img src="img/Geografis.jpg">
+            </div>
+                <div class="card-content">
+                <h3>Geografis</h3>
+                <p>Geografis di Aceh</p>
+                <a href="geo.html"class="btn">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="fuoto">
                 <img src="img/Cerita.jpg">
             </div>
                 <div class="card-content">
@@ -72,26 +92,6 @@ data-aos-duration="1200">
                 <h3>Area Wisata</h3>
                 <p>Area Wisata Rekomendasi di Aceh</p>
                 <a href="wisata.html"class="btn">Selengkapnya</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="fuoto">
-                <img src="img/Ekonomi.jpg">
-            </div>
-                <div class="card-content">
-                <h3>Ekonomi</h3>
-                <p>Ekonomi di Aceh</p>
-                <a href="ekon.html"class="btn">Selengkapnya</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="fuoto">
-                <img src="img/Geografis.jpg">
-            </div>
-                <div class="card-content">
-                <h3>Geografis</h3>
-                <p>Geografis di Aceh</p>
-                <a href="geo.html"class="btn">Selengkapnya</a>
             </div>
         </div>
         <div class="card">
@@ -182,29 +182,39 @@ data-aos-duration="1500">
         <img src="img/load.gif" alt="Loading...">
     </div>
  
-    <section class="footer">
-        <div class="social">
-            <a href="https://www.instagram.com/letsgo6104?igsh=NmszOHZvdnZ1NmV4"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/Rafi-Darussalam"><i class="fab fa-github"></i></a>
-            <a href="https://www.facebook.com/share/16Q9i3pfvt/"><i class="fab fa-facebook"></i></a>
-            <a href="mailto:rafidarussalam80@gmail.com"><i class="fas fa-envelope"></i></a>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Quick Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Recommended</h4>
+                    <ul>
+                        <li><a href="wisata.html">Area Wisata</a></li>
+                        <li><a href="kuliner.html">Kuliner</a></li>
+                        <li><a href="twisata.html">Tempat Wisata</a></li>
+                        <li><a href="nginap.html">Penginapan</a></li>
+                        <li><a href="event.html">Event</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/16Q9i3pfvt/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://youtube.com/@vergilversiindo?si=nXXyuHdAigPYFKvf"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/letsgo6104?igsh=NmszOHZvdnZ1NmV4"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <ul class="list">
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="about.html">About</a>
-            </li>
-        </ul>
-
+   </footer>
     
-    </section>
-    <p class="copyright" id="contact">
-        &copy2025 Rafi Darusalam - All Rights Reserved
-    </p>
-
     <script>
         let grupKartu = document.querySelector('.card-grup');
         let sedangDrag = false;
