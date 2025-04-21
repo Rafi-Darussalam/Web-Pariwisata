@@ -805,3 +805,16 @@ ul{
 .infff h1 {
     font-size: 20px;
 }
+
+.panjang {
+    background: rgb(255, 255, 255);
+}
+
+.isib {
+    justify-content: center;
+    padding: 10px;
+}
+
+.singkat {
+    background: rgb(255, 255, 255);
+}
