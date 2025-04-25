@@ -155,6 +155,37 @@ data-aos-duration="1500">
         <img src="img/load.gif" alt="Loading...">
     </div>
 
+    <script>
+        const cardGroup = document.querySelector('.card-group, .card-container');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        cardGroup.addEventListener('mousedown', (e) => {
+        isDown = true;
+        cardGroup.classList.add('active');
+        startX = e.pageX - cardGroup.offsetLeft;
+        scrollLeft = cardGroup.scrollLeft;
+        });
+
+        cardGroup.addEventListener('mouseleave', () => {
+        isDown = false;
+        cardGroup.classList.remove('active');
+        });
+
+        cardGroup.addEventListener('mouseup', () => {
+        isDown = false;
+        cardGroup.classList.remove('active');
+        });
+
+        cardGroup.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - cardGroup.offsetLeft;
+        const walk = (x - startX) * 1;
+        cardGroup.scrollLeft = scrollLeft - walk;
+        })
+    </script>
     <script src="scripty.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

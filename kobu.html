@@ -3,77 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kota & Kabupaten</title>
-    <link rel="icon" type="image/png" href="img/building-house-solid-24.png">
+    <title>Wisata</title>
     <link rel="stylesheet" href="selengkapnya.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-
     <header>
-        <nav>
+        <ul class="menu">
             <a href="index.html">Home</a>
+            <a href="javascript:history.back()">Back</a>
+        </ul>
     </header>
 
 
-    
     <div class="slider">
-
-
         <div class="list">
-
-            <div class="item">
-                <img src="img/Kota.jpg" alt="">
-
+            <div class="item active">
+                <img src="img/Kota.jpg">
                 <div class="content">
-                    <div class="title" style="color: rgb(121, 121, 121);">Kota</div>
-                    <div class="type">Area</div>
-                    <div class="description">
-                    Kota di aceh
-                    <div class="button">
-                        <a href="kota.html">Lihat</a>
-                    </div>
-                </div>
+                    <p>Area</p>
+                    <h2 style="color: rgb(104, 104, 104);">Kota</h2>
+                    <p>
+                        Kota di aceh
+                    </p>
                 </div>
             </div>
-
             <div class="item">
                 <img src="img/kab.jpg">
-
                 <div class="content">
-                    <div class="title" style="color: chocolate;">Kabupaten</div>
-                    <div class="type">Area</div>
-                    <div class="description">
+                    <p>Area</p>
+                    <h2 style="color: rgb(221, 144, 0);">Kabupaten</h2>
+                    <p>
                         Kabupaten di aceh
-                        <div class="button">
-                            <a href="bupat.html">Lihat</a>
-                        </div>
-                    </div>
+                    </p>
                 </div>
             </div>
-
         </div>
-
-
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
         <div class="thumbnail">
-
-            <div class="item">
-                <img src="img/kota.jpg" alt="">
+            <div class="item active">
+                <img src="img/Kota.jpg">
+                <div class="content">
+                    <a href="kota.html">Lihat</a>
+                </div>
             </div>
             <div class="item">
-                <img src="img/kab.jpg" alt="">
+                <img src="img/kab.jpg">
+                <div class="content">
+                    <a href="bupat.html">Lihat</a>
+                </div>
             </div>
-
         </div>
-
-
-        <div class="nextPrevArrows">
-            <button class="prev"> < </button>
-            <button class="next"> > </button>
-        </div>
-
-
     </div>
+
 
     <div class="loading-screen" id="loading">
         <img src="img/load.gif" alt="Loading...">
