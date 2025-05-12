@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
-    font-family: Poppins;
+    font-family: Segoe UI;
     margin: 0;
     background-color: #010101;
     color: #eee;
@@ -210,5 +210,107 @@ header .logo{
     }
     .arrows{
         top: 10%;
+    }
+}
+
+.footer {
+    margin-top: 100px;
+	display: flex;
+	flex-flow: row wrap;
+	padding: 50px;
+	color: #fff;
+	background: #24262b;
+}
+.box .fb:hover {
+    color: rgb(71, 71, 255);
+    background: white;
+    font-weight: bold;
+    padding: 2px;
+    border-radius: 3px;
+}
+.box .insta:hover {
+    color: rgb(255, 60, 0);
+    background: white;
+    padding: 2px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.box .yt:hover {
+    color: red;
+    background: white;
+    padding: 2px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.footer>* {
+	flex: 1 100%;
+}
+.side-one {
+	margin-right: 1.25em;
+	margin-bottom: 2em;
+}
+.footer h2 {
+	font-weight: 400;
+	font-size: 18px;
+    color: orange;
+}
+.footer ul {
+	list-style: none;
+	padding-left: 0;
+}
+.footer li {
+	line-height: 2em;
+}
+.footer a {
+	text-decoration: none;
+}
+.side-two {
+	display: flex;
+	flex-flow: row wrap;
+}
+.side-two>* {
+	flex: 1 50%;
+	margin-right: 1.25em;
+}
+.box a {
+	color: white;
+}
+.box a:hover {
+    color: rgb(175, 175, 175);
+}
+.h-box {
+	column-count: 2;
+	column-gap: 1.25em;
+}
+.copyright {
+	text-align: center;
+	color: white;
+	padding-top: 50px;
+}
+.side-one p {
+	padding-right: 20%;
+	color: white;
+}
+@media screen and (min-width: 600px) {	
+    .side-two>* {
+		flex: 1;
+	}
+	.features {
+		flex-grow: 2;
+	}
+	.side-one {
+		flex: 1 0px;
+	}
+	.side-two {
+		flex: 2 0px;
+	}
+}
+
+@media (max-width: 600px){
+    header p {
+        font-size: 40px;
+    }
+    .footer {
+        padding: 40px;
     }
 }

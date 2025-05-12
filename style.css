@@ -902,3 +902,105 @@ html {
 .inff2 h1 {
     font-size: 20px;
 }
+
+.popup {
+    display: none; /* Tersembunyi awalnya */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+  
+.popup-content {
+    background: white;
+    max-width: 85vw;
+    margin: 40px auto;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+  
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+  
+.open-popup {
+    font-weight: 24px;
+    padding: 10px;
+    color: white;
+    border: solid 1px;
+    background: rgb(255, 166, 0);
+}
+
+.open-popup:hover {
+    background: rgb(241, 157, 0);
+}
+  
+  
+  .ticket-order__popup-container {
+    background: #fff;
+    width: 90%;
+    max-width: 400px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 12px;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .ticket-order__popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .ticket-order__form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ticket-order__form label,
+  .ticket-order__form input,
+  .ticket-order__submit-btn {
+    margin: 2px 0;
+  }
+  
+  .ticket-order__submit-btn {
+    background-color: orange;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .ticket-order__submit-btn:hover {
+    background-color: rgb(238, 155, 0);
+  }
+
+.popup input {
+    display: block;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #f0f0f0;  /* warna latar */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+  
+
+
+@keyframes fadeIn {
+    from { opacity: 0;
+    transform: translateY(40px); }
+    to { opacity: 1;
+    transform: translateY(0px); }
+}
+  
