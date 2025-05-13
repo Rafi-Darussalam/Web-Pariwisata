@@ -955,13 +955,15 @@ html {
     background: rgba(0, 0, 0, 0.322);
     padding: 3px;
 }
-  
+
 .open-popup {
     font-weight: 24px;
     padding: 10px;
     color: white;
     border: solid 1px;
     background: rgb(255, 166, 0);
+    bottom: 10px;
+    left: 10px;
 }
 
 .open-popup:hover {
@@ -980,14 +982,6 @@ html {
     animation: fadeIn 0.3s ease;
   }
   
-  .ticket-order__popup-close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
   .ticket-order__form {
     display: flex;
     flex-direction: column;
@@ -995,8 +989,15 @@ html {
   
   .ticket-order__form label,
   .ticket-order__form input,
-  .ticket-order__submit-btn {
+  .ticket-order__submit-btn,
+  .ticket-order__form select {
     margin: 2px 0;
+  }
+
+  .ticket-order__form select {
+    font-size: 18px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
   }
   
   .ticket-order__submit-btn {

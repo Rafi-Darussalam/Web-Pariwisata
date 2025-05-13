@@ -127,6 +127,8 @@
     <div id="popups1" class="popup">
         <div class="ticket-order__popup-container">
             <h2 class="ticket-order__popup-title">Pemesanan Tiket</h2>
+            <p>Pantai Iboih</p>
+            <p>1 Tiket: <span id="hargaTiketSatuan">Rp230.000</span></p>
             
             <form id="ticketOrderForm" class="ticket-order__form">
               <label for="inputName">Nama Lengkap:</label>
@@ -137,6 +139,74 @@
         
               <label for="inputTicketQty">Jumlah Tiket:</label>
               <input type="number" id="inputTicketQty" name="tickets" min="1" required>
+
+              <label for="InputPayment">Pembayaran</label>
+              <select id="warna" name="warna" required>
+                <option value="">Pilih Pembayaran</option>
+                <option value="Dana">Dana</option>
+                <option value="Ovo">Ovo</option>
+                <option value="Gopay">Gopay</option>
+                <option value="Bank">Transfer Bank</option>
+              </select>
+        
+              <button type="submit" class="ticket-order__submit-btn">Pesan Sekarang</button>
+            </form>
+        
+          </div>
+      </div>
+
+
+
+
+      <div id="popup2" class="popup">
+        <div class="popup-content">
+          <span id="closePopup" class="close">Click outside to close</span>
+          <div class="crad" data-aos="fade-up"
+      data-aos-duration="1500">
+      <div class="crddd">
+          <img src="img/lhoknga.jpg" alt="">
+          <div class="lyrrr"></div>
+          <div class="inffff">
+              <h1>Pantai Lhoknga</h1>
+              <p>Pesan tiket ke pantai Iboih</p>
+              <button class="open-popup" data-target="#popups2">Pesan Tiket</button>
+              <button class="open-popup" data-target="#popupm2">Cek Peta</button>
+          </div>
+      </div>
+      </div>
+        </div>
+      </div>
+
+      <div id="popupm2" class="popup">
+        <div class="popup-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.876936731666!2d95.25678620000001!3d5.87291745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3041cf8814922c7d%3A0xad5746c8f98121f3!2sPantai%20Iboih!5e0!3m2!1sid!2sid!4v1747062344933!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      </div>
+
+      <div id="popups2" class="popup">
+        <div class="ticket-order__popup-container">
+            <h2 class="ticket-order__popup-title">Pemesanan Tiket</h2>
+            <p>Pantai Lhoknga</p>
+            <p>1 Tiket: <span id="hargaTiketSatuan">Rp200.000</span></p>
+            
+            <form id="ticketOrderForm" class="ticket-order__form">
+              <label for="inputName">Nama Lengkap:</label>
+              <input type="text" id="inputName" name="name" required>
+        
+              <label for="inputDate">Tanggal Keberangkatan:</label>
+              <input type="date" id="inputDate" name="date" required>
+        
+              <label for="inputTicketQty">Jumlah Tiket:</label>
+              <input type="number" id="inputTicketQty" name="tickets" min="1" required>
+
+              <label for="InputPayment">Pembayaran</label>
+              <select id="warna" name="warna" required>
+                <option value="">Pilih Pembayaran</option>
+                <option value="Dana">Dana</option>
+                <option value="Ovo">Ovo</option>
+                <option value="Gopay">Gopay</option>
+                <option value="Bank">Transfer Bank</option>
+              </select>
         
               <button type="submit" class="ticket-order__submit-btn">Pesan Sekarang</button>
             </form>
@@ -180,9 +250,6 @@
     </div>
 
     <script>
-
-
-       // Buka popup sesuai tombol
 document.querySelectorAll('.open-popup').forEach(button => {
   button.addEventListener('click', function () {
     const targetSelector = this.dataset.target;
@@ -192,7 +259,6 @@ document.querySelectorAll('.open-popup').forEach(button => {
   });
 });
 
-// Tutup popup saat klik luar konten
 window.addEventListener('click', function (e) {
   if (e.target.classList.contains('popup')) {
     e.target.style.display = 'none';

@@ -209,7 +209,9 @@ body{
     text-decoration: none;
     border: white solid 1px;
     padding: 3px;
-    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
 }
 .content a:hover{
     color: lightgray;
