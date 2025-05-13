@@ -99,11 +99,15 @@ html {
 
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .wrapper {
         max-width: 85vw !important;
     }
     
+    .no-scroll {
+        overflow: hidden;
+    }
+
     .icons {
         display: inline-flex;
     }
@@ -154,6 +158,10 @@ html {
         text-decoration: underline;
         color: rgb(255, 255, 255);
         background: rgba(199, 199, 199, 0.7);
+    }
+
+    .popup-map {
+        width: 80vw !important;
     }
 
     .back-video {
@@ -292,7 +300,7 @@ html {
         font-size: 40px;
     }
     .footer {
-        padding: 40px;
+        padding: 40px;
     }
 }
 
@@ -909,16 +917,30 @@ html {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.5);
     transition: 0.3s ease-in-out;
+}
+
+.close-popup {
+    padding-left: 3px;
+    padding-right: 3px;
+    background: orange;
+    color: white;
 }
   
 .popup-content {
     background: white;
     max-width: 85vw;
-    margin: 40px auto;
     position: relative;
+    margin: 40px auto;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-map {
+    width: 600px;
+    position: relative;
+    margin: 50px auto;
     animation: fadeIn 0.3s ease;
 }
   
@@ -926,8 +948,12 @@ html {
     position: absolute;
     top: 5px;
     right: 10px;
-    font-size: 20px;
+    font-size: 13px;
     cursor: pointer;
+    z-index: 100 !important;
+    color: white;
+    background: rgba(0, 0, 0, 0.322);
+    padding: 3px;
 }
   
 .open-popup {
@@ -994,8 +1020,6 @@ html {
     border-radius: 6px;
     margin-bottom: 10px;
 }
-  
-
 
 @keyframes fadeIn {
     from { opacity: 0;
@@ -1003,4 +1027,3 @@ html {
     to { opacity: 1;
     transform: translateY(0px); }
 }
-  

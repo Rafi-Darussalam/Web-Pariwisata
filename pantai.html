@@ -73,6 +73,7 @@
         data-aos-duration="1700">
             <h2>Pantai Lhoknga</h2>
             <p>Pantai Lhoknga, yang terletak sekitar 20 km dari Banda Aceh, adalah salah satu pantai paling populer di Aceh dengan hamparan pasir putih luas, ombak yang cocok untuk berselancar, serta pemandangan matahari terbenam yang memukau, menjadikannya destinasi favorit bagi wisatawan yang ingin menikmati keindahan alam, berenang, atau bersantai di tepi pantai sambil merasakan angin laut yang menenangkan, menikmati hidangan khas di warung-warung sekitar pantai, serta mengagumi panorama pegunungan yang mengelilingi kawasan ini.</p>
+            <button class="open-popup" data-target="#popup2">Pesan Tiket</button>
         </div>
     </div>
 
@@ -100,7 +101,7 @@
 
     <div id="popup1" class="popup">
       <div class="popup-content">
-        <span id="closePopup" class="close">&times;</span>
+        <span id="closePopup" class="close">Click outside to close</span>
         <div class="crad" data-aos="fade-up"
     data-aos-duration="1500">
     <div class="crddd">
@@ -109,14 +110,21 @@
         <div class="inffff">
             <h1>Pantai Iboih</h1>
             <p>Pesan tiket ke pantai Iboih</p>
-            <button class="open-popup" data-target="#popup2">Pesan Tiket</button>
+            <button class="open-popup" data-target="#popups1">Pesan Tiket</button>
+            <button class="open-popup" data-target="#popupm1">Cek Peta</button>
         </div>
     </div>
     </div>
       </div>
     </div>
 
-    <div id="popup2" class="popup">
+    <div id="popupm1" class="popup">
+        <div class="popup-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.876936731666!2d95.25678620000001!3d5.87291745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3041cf8814922c7d%3A0xad5746c8f98121f3!2sPantai%20Iboih!5e0!3m2!1sid!2sid!4v1747062344933!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      </div>
+
+    <div id="popups1" class="popup">
         <div class="ticket-order__popup-container">
             <h2 class="ticket-order__popup-title">Pemesanan Tiket</h2>
             
@@ -135,8 +143,6 @@
         
           </div>
       </div>
-    
-
 
     <footer class="footer">
 		<div class="side-one">
@@ -174,12 +180,15 @@
     </div>
 
     <script>
+
+
        // Buka popup sesuai tombol
 document.querySelectorAll('.open-popup').forEach(button => {
   button.addEventListener('click', function () {
     const targetSelector = this.dataset.target;
     const popup = document.querySelector(targetSelector);
     popup.style.display = 'block';
+    document.body.classList.add('no-scroll');
   });
 });
 
@@ -187,6 +196,8 @@ document.querySelectorAll('.open-popup').forEach(button => {
 window.addEventListener('click', function (e) {
   if (e.target.classList.contains('popup')) {
     e.target.style.display = 'none';
+
+    document.body.classList.remove('no-scroll');
   }
 });
 

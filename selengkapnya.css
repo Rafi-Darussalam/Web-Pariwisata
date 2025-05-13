@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
-    font-family: Segoe UI;
     margin: 0;
     background-color: #010101;
     color: #eee;
+    font-family: sans-serif;
 }
 *{
     -webkit-tap-highlight-color: transparent;
@@ -31,20 +30,135 @@ body{
     opacity: 0;
     pointer-events: none;
 }
-header{
-    width: 1200px;
-    max-width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    grid-template-rows: 50px;
-    justify-content: center;
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%; 
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
-    z-index: 100;
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 2px 5px black;
+    border-bottom: 1px solid white;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    z-index: 100 !important;
 }
-header .logo{
-    font-weight: bold;
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.logo {
+    font-size: 2rem;
+    color: lightgray;
+    transition: .4s ease-in-out;
+}
+
+.logo:hover {
+    color: white;
+}
+
+.navbar a {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 2.5rem;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 5px white;
+}
+
+#check {
+    display: none;
+}
+
+#chech:disabled {
+    pointer-events: none !important;
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 1.8rem;
+    color: lightgray;
+    cursor: pointer;
+    display: none;
+    transition: .4s ease-in-out;
+}
+
+.icons:hover {
+    color: white;
+}
+
+@media (max-width: 992px) {
+    
+
+}
+@media (max-width: 767px) {
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        height: 0%;
+        overflow: hidden;
+        background: rgba(235, 235, 235, 0.5);
+        transition: .3s ease;
+        box-shadow: 0 0 1px black;
+        border-radius: 15px;
+        z-index: 99999 !important;
+    }
+
+    #check:checked~.navbar {
+        height: 12.7rem;
+    }
+
+    .navbar a {
+        display: block;
+        color: rgb(255, 255, 255);
+        font-size: 1.1rem;
+        text-shadow: 0 0 5px black;
+        margin: 1.5rem 0;
+        text-align: center;
+        transition: .3s ease-in-out !important;
+    }
+
+    .navbar a:hover {
+        text-shadow: 0 0 30px rgb(255, 255, 255);
+        transform: scale(1.4);
+        text-decoration: underline;
+        color: rgb(255, 255, 255);
+        background: rgba(199, 199, 199, 0.7);
+    }
 }
 .menu {
     display: flex;
@@ -105,7 +219,7 @@ header .logo{
 .slider .list .item .content{
     position: absolute;
     left: 2%;
-    top: 10%;
+    top: 20%;
     width: 500px;
     max-width: 80%;
     z-index: 1;
@@ -152,13 +266,13 @@ header .logo{
 .arrows button{
     background-color: rgb(255, 136, 0);
     border: none;
-    font-family: monospace;
     width: 40px;
     height: 40px;
     border-radius: 5px;
     font-size: x-large;
     color: #eee;
     transition: .5s;
+    margin-top: 90px;
 }
 .arrows button:hover{
     background-color: #d87a00;

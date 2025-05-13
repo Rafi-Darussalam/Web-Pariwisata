@@ -5,13 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budaya</title>
     <link rel="stylesheet" href="selengkapnya.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>
-        <ul class="menu">
-            <a href="index.html">Home</a>
-            <a href="javascript:history.back()">Back</a>
-        </ul>
+    <header class="header">
+        <div class="logo" style="font-weight: bold;"><Span style="color: white;">To </Span><span style="color: orange;">Aceh</span></div>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+        <nav class="navbar">
+            <a href="index.html" data-aos="fade-right"
+            data-aos-duration="2500">Home</a>
+            <a href="about.html" data-aos="fade-right"
+            data-aos-duration="2300">About</a>
+            <a href="contact.html" data-aos="fade-right"
+            data-aos-duration="1900">Contact</a>
+            <a href="javascript:history.back()" data-aos="fade-right"
+            data-aos-duration="1500">Back</a>
+        </nav>
     </header>
 
 

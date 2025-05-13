@@ -5,13 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuliner</title>
     <link rel="stylesheet" href="selengkapnya.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>
-        <ul class="menu">
-            <a href="index.html">Home</a>
-            <a href="javascript:history.back()">Back</a>
-        </ul>
+    <header class="header">
+        <div class="logo" style="font-weight: bold;"><Span style="color: white;">To </Span><span style="color: orange;">Aceh</span></div>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+        <nav class="navbar">
+            <a href="index.html" data-aos="fade-right"
+            data-aos-duration="2500">Home</a>
+            <a href="about.html" data-aos="fade-right"
+            data-aos-duration="2300">About</a>
+            <a href="contact.html" data-aos="fade-right"
+            data-aos-duration="1900">Contact</a>
+            <a href="javascript:history.back()" data-aos="fade-right"
+            data-aos-duration="1500">Back</a>
+        </nav>
     </header>
 
 
@@ -57,6 +72,37 @@
             </div>
         </div>
     </div>
+
+    <footer class="footer">
+		<div class="side-one">
+            <h2>About me</h2>
+			<p>Saya Rafi Darussalam, siswa kelas X PPLG 2 di SMKN 1 Cisarua. Website ini saya buat untuk memperkenalkan keindahan alam, budaya, kuliner, dan sejarah Aceh. Saya berharap melalui website ini, masyarakat bisa lebih mengenal Aceh sebagai salah satu daerah yang kaya akan nilai dan keunikan.</p>           
+		</div>
+		<ul class="side-two">
+			<li>
+				<h2>Follow us</h2>
+				<ul class="box">
+					<li><a class="fb" href="https://www.facebook.com/share/16Q9i3pfvt/">Facebook</a></li>
+					<li><a class="yt" href="https://youtube.com/@vergilversiindo?si=nXXyuHdAigPYFKvf">Youtube</a></li>
+					<li><a class="insta" href="https://www.instagram.com/letsgo6104?igsh=NmszOHZvdnZ1NmV4">Instagram</a></li>
+				</ul>
+			</li>
+			<li class="features">
+				<h2>Quick links</h2>
+				<ul class="box h-box">
+                    <li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="wisata.html">Area Pariwisata</a></li>
+					<li><a href="twisata.html">Tempat Pariwisata</a></li>
+					<li><a href="nginap.html">Penginapan</a></li>
+					<li><a href="kuliner.html">Kuliner</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div class="copyright">
+			<p>©Rafi darussalam 2025 All rights reserved</p>
+		</div>
+	</footer>
 
 
     <div class="loading-screen" id="loading">
