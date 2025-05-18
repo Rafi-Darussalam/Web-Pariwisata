@@ -13,16 +13,7 @@
 </head>
 </head>
 <body >
-    <div class="hero">
-        <video autoplay loop muted plays-inline class="back-video">
-            <source src="vid/Background.mp4" type="video/mp4">
-        </video>
-        <div class="konten">
-            <h1 >Kontak</h1>
-        </div>
-        <div class="item"></div>
-    </div>
-<header class="header">
+<header class="header" style="background: #24262b;">
     <div class="logo" style="font-weight: bold;"><Span style="color: white;">To </Span><span style="color: orange;">Aceh</span></div>
 
 
@@ -40,44 +31,104 @@
             data-aos-duration="2300">About</a>
             <a href="#" data-aos="fade-right"
             data-aos-duration="1900" style="background: rgba(221, 221, 221, 0.479);
-            padding: 5px;">Contact</a>
+            padding: 5px;
+            border: 1px solid white;
+            border-radius: 5px;">Contact</a>
             <a href="javascript:history.back()" data-aos="fade-right"
             data-aos-duration="1500">Back</a>
         </nav>
     </header>
 
+    <div class="conta ">
+	<div class="contain">
+		<main class="row">
+			
 
-    <div class="skrol" style="margin-top: 100px;">
-    <h1>Kontak</h1>
-</div>
-<div class="lainnya" style="background: orange;">
-    <div class="wrapper">
-        <div class="text-box" data-aos="fade-up"
-        data-aos-duration="1700">
-            <h2>Whatsapp</h2>
-            <p>08990917835</p>
-            <a href="">Hubungi</a>
-        </div>
-    </div>
+			<section class="col left">
+				
 
-    <div class="wrapper">
-        <div class="text-box" data-aos="fade-up"
-        data-aos-duration="1700">
-            <h2>Email</h2>
-            <p>rafidarussalam80@gmail.com</p>
-            <a href="">Hubungi</a>
-        </div>
-    </div>
+				<div class="contactTitle" style="z-index: -1 !important;">
+					<h2>Kontak Kami</h2>
+				
+				</div>
 
-    <div class="wrapper">
-        <div class="text-box" data-aos="fade-up"
-        data-aos-duration="1700">
-            <h2>Discord</h2>
-            <p>amogus1010.</p>
-            <a href="">Hubungi</a>
+
+
+				<div class="contactInfo" style="z-index: -1 !important;">
+					
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-phone"></i>
+						</div>
+						<div class="details">
+							<span>Telepon</span>
+							<span>+62 899-0917-835</span>
+						</div>
+					</div>
+
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-envelope"></i>
+						</div>
+						<div class="details">
+							<span>Email</span>
+							<span>rafidarussalam80@gmail.com</span>
+						</div>
+					</div>
+
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-location-dot"></i>
+						</div>
+						<div class="details">
+							<span>Lokasi</span>
+							<span>Bandung, Jawa Barat, Indonesia</span>
+						</div>
+					</div>
+
+				</div>
+
+
+				
+
+
+
+			</section>
+
+
+			<section class="col right">
+				
+
+				<form class="messageForm">
+					
+					<div class="inputGroup halfWidth">
+						<input type="text" name="" required="required">
+						<label>Your Name</label>
+					</div>
+
+					<div class="inputGroup halfWidth">
+						<input type="email" name="" required="required">
+						<label>Email</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<input type="text" name="" required="required">
+						<label>Subject</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<textarea required="required"></textarea>
+						<label>Say Something</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<button>Send Message</button>
+					</div>
+
+				</form>
+
+			</section>
         </div>
-    </div>
-</div>
 
 <footer class="footer">
     <div class="side-one">
@@ -119,5 +170,13 @@
     <script>
         AOS.init();
     </script>
+    <style>
+@media (max-width: 768px) {
+    .navbar {
+        background: #24262b;
+        z-index: 99999999999999999999999999999999 !important;
+    }
+}
+    </style>
 </body>
 </html>
