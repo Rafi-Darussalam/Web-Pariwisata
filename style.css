@@ -1189,20 +1189,23 @@ textarea::-webkit-scrollbar-thumb{
 
 :root {
         --dark: #34495E;
-        --light: #ffffff;
         --success: #0ABF30;
         --error: #E24D4C;
         --info: orange;
       }
 
-form {
-      background: var(--light);
+.form-container {
+      background: url(img/bgf.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
       padding: 20px;
       border-radius: 6px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       width: 100%;
       max-width: 325px;
       margin: 10px auto;
+      background-color: white;
+      animation: fadeIn 0.3s ease;
     }
     form .form-group {
       margin-bottom: 10px;
@@ -1217,6 +1220,7 @@ form {
       padding: 4px 6px;
       border: 1px solid #ccc;
       border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     #payment {
         font-size: 1rem;
@@ -1227,7 +1231,7 @@ form {
     }
     form button {
       background: var(--info);
-      color: var(--light);
+      color: white;
       border: none;
       padding: 10px;
       font-size: 1rem;
@@ -1243,11 +1247,12 @@ form {
       z-index: 1000;
     }
     .notifications .toast {
+    border: 1px solid gray;
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 350px;
-      background: var(--light);
+      background: white;
       padding: 16px;
       margin-bottom: 10px;
       border-radius: 4px;
